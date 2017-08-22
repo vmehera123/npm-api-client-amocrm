@@ -328,11 +328,7 @@ class AmoV2ApiClient extends AmoApiClient {
       action = entity;
       entity = null;
     }
-
-    if (!resp[action]) {
-      return reject(resp);
-    }
-
+    
     if (entity !== null) {
       if (_.has(resp[action], entity) && _.has(resp[action], 'errors')) {
         if (keepErrors !== true) {

@@ -375,10 +375,6 @@ var AmoV2ApiClient = function (_AmoApiClient) {
         entity = null;
       }
 
-      if (!resp[action]) {
-        return reject(resp);
-      }
-
       if (entity !== null) {
         if (_underscore2.default.has(resp[action], entity) && _underscore2.default.has(resp[action], 'errors')) {
           if (keepErrors !== true) {
