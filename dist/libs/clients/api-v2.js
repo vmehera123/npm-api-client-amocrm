@@ -382,12 +382,12 @@ var AmoV2ApiClient = function (_AmoApiClient) {
       if (entity !== null) {
         if (_underscore2.default.has(resp[action], entity) && _underscore2.default.has(resp[action], 'errors')) {
           if (keepErrors !== true) {
-            return resolve(resp[action][entity]);
+            return resolve(resp);
           }
         }
       }
 
-      return resolve(resp[action]);
+      return resolve(resp);
     }
 
     /**
