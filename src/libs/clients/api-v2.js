@@ -336,13 +336,13 @@ class AmoV2ApiClient extends AmoApiClient {
     if (entity !== null) {
       if (_.has(resp[action], entity) && _.has(resp[action], 'errors')) {
         if (keepErrors !== true) {
-          return resolve(resp[action][entity]);
+          return resolve(resp);
         }
       }
     }
 
 
-    return resolve(resp[action]);
+    return resolve(resp);
   }
 
   /**
